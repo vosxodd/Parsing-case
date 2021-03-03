@@ -27,6 +27,33 @@ with open("input.txt") as f:
       print(COMP,file=f_out)
       print(name,file=f_out)
       print(name,file=f_out)
+      
+part_ATT = text.find('passingAttempts')
+ATT = text[text.find('>',part_ATT)+1:text.find('</th',part_ATT)]
+ATT = ATT.replace('n','').replace('\\','').strip()
+print(ATT)
+
+part_COMP = text.find('passingCompletions')
+COMP = text[text.find('>',part_COMP)+1:text.find('</th',part_COMP)]
+COMP = COMP.replace('n','').replace('\\','').strip()
+print(COMP)
+
+part_YDS = text.find('passingYards')
+YDS = text[text.find('>',part_YDS)+1:text.find('</th',part_YDS)]
+YDS = YDS.replace('n','').replace('\\','').strip()
+print(YDS)
+
+part_TD = text.find('passingTouchdowns')
+TD = text[text.find('>',part_TD)+1:text.find('</th',part_TD)]
+TD = TD.replace('n','').replace('\\','').strip()
+print(TD)
+
+part_INT = text.find('passingInterceptions')
+INT = text[text.find('>',part_INT)+1:text.find('</th',part_INT)]
+INT = INT.replace('n','').replace('\\','').strip()
+print(INT)
+
+
 
 
 
