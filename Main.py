@@ -19,27 +19,22 @@ with open("input.txt") as f:
       name = text[text.find('>',part_name)+1:text.find('</h1',part_name)]
       ATT = text[text.find('>',part_ATT)+1:text.find('</th',part_ATT)]
       ATT = ATT.replace('n','').replace('\\','').strip()
-      COMP= text[text.find('>',part_COMP)+1:text.find('</h1',part_COMP)]
+      COMP = text[text.find('>',part_COMP)+1:text.find('</th',part_COMP)]
       COMP = COMP.replace('n','').replace('\\','').strip()
-      YDS= text[text.find('>',part_YDS)+1:text.find('</h1',part_YDS)]
+      YDS= text[text.find('>',part_YDS)+1:text.find('</th',part_YDS)]
       YDS = YDS.replace('n','').replace('\\','').strip()
-      TD= text[text.find('>',part_TD)+1:text.find('</h1',part_TD)]
+      TD= text[text.find('>',part_TD)+1:text.find('</th',part_TD)]
       TD = TD.replace('n','').replace('\\','').strip()
-      INT= text[text.find('>',part_name)+1:text.find('</h1',part_name)]
+      INT= text[text.find('>',part_INT)+1:text.find('</th',part_INT)]
       INT = INT.replace('n','').replace('\\','').strip()
+      part_PR = text.find('passingPasserRating')
+      PR = text[text.find('>',part_PR)+1:text.find('</th',part_PR)]
+      PR = PR.replace('n','').replace('\\','').strip()
+      PR = format(float(PR),'.2f')
       print(name,file=f_out)
       print(COMP,file=f_out)
       print(ATT,file=f_out)
       print(YDS,file=f_out)
       print(TD,file=f_out)
       print(INT,file=f_out)
-      
-
-
-
-
-
-
-
-
-
+      print(PR, file=f_out)
