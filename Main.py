@@ -3,6 +3,8 @@
 #               Soloveychik D. (%),
 #               Labuzov A. (%)
 import urllib.request
+k=19
+y=6
 with open("input.txt") as f:
   with open("output.txt","w") as f_out:
     for line in f:
@@ -31,10 +33,5 @@ with open("input.txt") as f:
       PR = text[text.find('>',part_PR)+1:text.find('</th',part_PR)]
       PR = PR.replace('n','').replace('\\','').strip()
       PR = format(float(PR),'.2f')
-      print(name,file=f_out,end=" ")
-      print(COMP,file=f_out,end=" ")
-      print(ATT,file=f_out,end=" ")
-      print(YDS,file=f_out,end=" ")
-      print(TD,file=f_out,end=" ")
-      print(INT,file=f_out,end=" ")
-      print(PR, file=f_out)
+      print(name+" "*(k-len(name)),COMP+" "*(y-len(COMP)),ATT+" "*(y-len(ATT)),YDS+" "*(y-len(YDS)),TD+" "*(y-len(TD)),INT+" "*(y-len(INT)),PR+" "*(y-len(PR)))
+      
