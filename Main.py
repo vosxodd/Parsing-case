@@ -33,5 +33,12 @@ with open("input.txt") as f:
       PR = text[text.find('>',part_PR)+1:text.find('</th',part_PR)]
       PR = PR.replace('n','').replace('\\','').strip()
       PR = format(float(PR),'.2f')
+      name=str(name)
+      COMP=str(COMP)
+      ATT=str(ATT)
+      YDS=str(YDS)
+      TD=str(TD)
+      INT=str(INT)
+      PR=str(PR)
       print(name+" "*(k-len(name)),COMP+" "*(y-len(COMP)),ATT+" "*(y-len(ATT)),YDS+" "*(y-len(YDS)),TD+" "*(y-len(TD)),INT+" "*(y-len(INT)),PR+" "*(y-len(PR)))
       
