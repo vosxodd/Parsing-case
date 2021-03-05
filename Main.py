@@ -1,7 +1,7 @@
 # Case-study #4
-# Developers:   Aksenov A. (%),
-#               Soloveychik D. (%),
-#               Labuzov A. (%)
+# Developers:   Aksenov A. (40%),
+#               Soloveychik D. (38%),
+#               Labuzov A. (42%)
 import urllib.request
 k=19
 y=6
